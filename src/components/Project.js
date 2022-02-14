@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import image1, { image2, image3 } from './ProjectPhoto';
+import image1, { image2, image3 } from '../ProjectPhoto';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
