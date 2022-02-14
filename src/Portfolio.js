@@ -1,4 +1,6 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
+import Favicon from './asset/favicon.ico';
 import styled from 'styled-components';
 import About from './components/About';
 import Footer from './components/Footer';
@@ -14,14 +16,20 @@ const Wrapper = styled.div`
 
 const Portfolio = () => {
   return (
-    <Wrapper>
-      <Navbar />
-      <Header />
-      <About />
-      <Skill />
-      <Project />
-      <Footer />
-    </Wrapper>
+    <>
+      <Helmet>
+        <title>DH's Portfolio</title>
+        <link rel='icon' href='./asset/favicon.ico' />
+      </Helmet>
+      <Wrapper>
+        <Navbar />
+        <Header />
+        <About />
+        <Skill />
+        <Project />
+        <Footer />
+      </Wrapper>
+    </>
   );
 };
 

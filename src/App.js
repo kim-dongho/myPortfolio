@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import Portfolio from './Portfolio';
+import { Helmet } from 'react-helmet';
+import Favicon from './asset/favicon.ico';
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
@@ -30,7 +32,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     line-height: 1;
-      overflow-x: hidden;
+    overflow-x: hidden;
   }
   ol, ul {
     list-style: none;
@@ -52,6 +54,10 @@ const GlobalStyle = createGlobalStyle`
 function App() {
   return (
     <>
+      <Helmet>
+        <title>DH's Portfolio</title>
+        <link rel='icon' href={Favicon} />
+      </Helmet>
       <GlobalStyle />
       <Portfolio />
     </>
