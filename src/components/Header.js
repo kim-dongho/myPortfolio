@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import styled from 'styled-components';
-import bgImg from './asset/bg.svg';
+import bgImg from '../asset/bg.svg';
 
 const Head = styled.div`
   height: 100vh;

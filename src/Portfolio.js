@@ -1,12 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import About from './About';
-import Footer from './Footer';
-import Header from './Header';
-import Introduce from './Introduce';
-import Navbar from './Navbar';
-import Project from './Project';
-import Skill from './Skill';
+import About from './components/About';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Navbar from './components/Navbar';
+import Project from './components/Project';
+import Skill from './components/Skill';
 
 const Wrapper = styled.div`
   width: 100vw;
@@ -21,7 +20,6 @@ const Portfolio = () => {
       <About />
       <Skill />
       <Project />
-      {/*Introduce*/}
       <Footer />
     </Wrapper>
   );

@@ -48,6 +48,11 @@ const NavItems = styled(motion.div)`
     margin: 10px;
     margin-top: 20px;
   }
+
+  a:hover {
+    transform: translate(20px);
+    transition: 0.5s;
+  }
   @media screen and (max-width: 768px) {
     font-size: 14px;
     margin-top: 10px;
@@ -88,7 +93,7 @@ const Navbar = () => {
   return (
     <Nav style={{ color: 'black', width: clicked ? '30vw' : '100vw' }}>
       <Button
-        whileHover={{ x: 30 }}
+        whileHover={{ x: 10 }}
         onClick={() => {
           setClicked(!clicked);
           console.log(clicked);
@@ -102,9 +107,7 @@ const Navbar = () => {
           <NavItems initial={{ x: -500 }} animate={{ x: 0 }} exit={{ x: -500 }}>
             {links.map((item) => (
               <Link to={item.to} spy={true} smooth={true}>
-                <ItemLink key={item.id} whileHover={{ x: 10 }}>
-                  ㅡ {item.name}
-                </ItemLink>
+                <ItemLink key={item.id}>ㅡ {item.name}</ItemLink>
               </Link>
             ))}
           </NavItems>
